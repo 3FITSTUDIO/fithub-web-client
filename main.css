@@ -1,0 +1,171 @@
+body, html
+{
+	height: 100%;
+	width: 100%;
+	background: linear-gradient( rgba(2,0,36,1) 0%, rgba(58,2,71,1) 35%,  rgb(72, 7, 102) 100%);
+	color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+}
+
+
+h1
+{
+	font-size: 36px;
+	font-weight: 400;
+	color: whitesmoke;
+	margin: 20px;
+}
+
+.features
+{
+	text-align: center;
+}
+
+.features img
+{
+	width: 100%;
+	height: auto;
+}
+
+.features p
+{
+	margin-bottom: 30px;
+}
+
+.features figcaption
+{
+	margin-top: 8px;
+}
+
+.navbar-nav li:hover>.dropdown-menu
+{
+	display: block;
+}
+
+.navbar
+{
+	background-color: whitesmoke;
+	z-index: 999;
+	min-height: 56px;
+	
+}
+
+figure 
+{
+	margin-left: 3%;
+	margin-right: 3%;
+	opacity:0.8;
+}
+
+figure:hover{
+	opacity:1;
+}
+
+.bg-features
+{
+	background-color: #4b0658 !important;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* .sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  /* .sticky + .content {
+	padding-top: 60px;
+  }
+ */ 
+/* login menu */
+
+
+	
+	.card{
+	height: 370px;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 400px;
+	background-color: rgba(0,0,0,0.5) !important;
+	text-align: center;
+	}
+	
+	.social_icon span{
+	font-size: 60px;
+	margin-left: 10px;
+	color: rgb(127, 23, 143);
+	}
+	
+	.social_icon span:hover{
+	color: white;
+	cursor: pointer;
+	}
+	
+	.card-header h3{
+	color: white;
+	}
+	
+	.social_icon{
+	position: absolute;
+	right: 20px;
+	top: -45px;
+	}
+	
+	.input-group-prepend span{
+	width: 50px;
+	background-color: rgb(127, 23, 143);
+	color: black;
+	border:0 !important;
+	}
+	
+	input:focus{
+	outline: 0 0 0 0  !important;
+	box-shadow: 0 0 0 0 !important;
+	
+	}
+	
+	.remember{
+	color: white;
+	}
+	
+	.remember input
+	{
+	width: 20px;
+	height: 20px;
+	margin-left: 15px;
+	margin-right: 5px;
+	}
+	
+	.login_btn{
+	color: whitesmoke;
+	background-color: rgb(127, 23, 143);
+	width: 100px;
+	}
+	
+	.login_btn:hover{
+	color: black;
+	background-color: white;
+	}
+	
+	.links{
+	color: white;
+	}
+	
+	.links a{
+	margin-left: 4px;
+	}
+
+	/* .margin-top
+	{
+		margin-top: 10%;
+	} */
+
+	.divider-vertical {
+		height: 50px;
+		margin: 0 9px;
+		border-left: 1px solid #F2F2F2;
+		border-right: 1px solid #FFF;
+		}
+		

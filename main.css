@@ -2,10 +2,11 @@ body, html
 {
 	height: 100%;
 	width: 100%;
-	background: linear-gradient( rgba(2,0,36,1) 0%, rgba(58,2,71,1) 35%,  rgb(72, 7, 102) 100%);
+	background: linear-gradient( rgb(173, 148, 208) 0%, rgb(135, 67, 229) 35%,  rgb(102, 31, 128) 100%);
 	color: #efefef;
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
+
 }
 
 
@@ -45,7 +46,8 @@ h1
 
 .navbar
 {
-	background-color: whitesmoke;
+	color: black;
+	background-color: deeppink;
 	z-index: 999;
 	min-height: 56px;
 	
@@ -64,7 +66,7 @@ figure:hover{
 
 .bg-features
 {
-	background-color: #4b0658 !important;
+	background-color: rgb( 93, 34, 152) !important;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
@@ -84,13 +86,15 @@ figure:hover{
 
 	
 	.card{
-	height: 370px;
-	margin-top: auto;
-	margin-bottom: auto;
-	width: 400px;
-	background-color: rgba(0,0,0,0.5) !important;
-	text-align: center;
-	}
+		 height: auto;
+		 margin-top: 5px;
+		 margin-bottom: auto;
+		 width: 400px;
+		 background-color: rgba(0,0,0,0.5) !important;
+		 text-align: center;
+	 }
+
+
 	
 	.social_icon span{
 	font-size: 60px;
@@ -143,6 +147,14 @@ figure:hover{
 	background-color: rgb(127, 23, 143);
 	width: 100px;
 	}
+
+	.login_btn_registration{
+		color: whitesmoke;
+		background-color: rgb(127, 23, 143);
+		width: 200px;
+	}
+
+
 	
 	.login_btn:hover{
 	color: black;

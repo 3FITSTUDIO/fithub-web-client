@@ -28,7 +28,7 @@
 			</button>
 			<div class="collapse navbar-collapse" id="mainmenu">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
+					<li class="nav-item ">
 						<a class="nav-link" href="#"> Dashboard</a>
 					</li>
 					<li class="nav-item dropdown">
@@ -48,7 +48,7 @@
 					<li class="nav-item">
 						<a class="nav-link " href="#"> Meals </a>
 					</li>
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
 						   aria-expanded="false" id="submenuAdd" aria-haspopup="true"> Add </a>
 						<div class="dropdown-menu" aria-labelledby="submenu">
@@ -85,50 +85,61 @@
 
 			<div class="container">
 
-				<header>
-					<h1>Welcome in FitHUB!</h1>
-					<p>It's a pleasure to present to you our APP.</p>
-
-				</header>
-
-				<div class="row">
-
-					<div class="col-sm-6 col-md-5 offset-md-1">
-
-						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 1"></a>
-							<figcaption>Feature 1</figcaption>
-						</figure>
-
+				<div class="col-md-8 offset-md-2" style="margin-top: 1%">
+					<div class="d-flex justify-content-center h-100">
+						<div class="card">
+							<div class="card-header">
+								<h1>Date: <span id="datetime"></span></h1>
+							</div>
+							<div class="card-body">
+								<form>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Neck</label>
+											<input type="neck_measure" class="form-control" id="neck_measure">
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Chest</label>
+											<input type="neck_measure" class="form-control" id="chest_measure" >
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Bicep</label>
+											<input type="neck_measure" class="form-control" id="bicep" >
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Forearm</label>
+											<input type="neck_measure" class="form-control" id="forearm" >
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Stomach</label>
+											<input type="neck_measure" class="form-control" id="stomach" >
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Waist</label>
+											<input type="neck_measure" class="form-control" id="waist" >
+										</div>
+									</div>
+									<div class="form-row">
+										<div class="form-group col-md-8 offset-md-2">
+											<label>Thigh</label>
+											<input type="neck_measure" class="form-control" id="thigh" >
+										</div>
+									</div>
+									<button type="submit" class="btn float-center login_btn_registration">Add measures</button>
+								</form>
+							</div>
+						</div>
 					</div>
-
-					<div class="col-sm-6 col-md-5">
-
-						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 2"></a>
-							<figcaption>Feature 2</figcaption>
-						</figure>
-
-					</div>
-
-					<div class="col-sm-6 col-md-5 offset-md-1">
-
-						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 3"></a>
-							<figcaption>Feature 3</figcaption>
-						</figure>
-
-					</div>
-
-					<div class="col-sm-6 col-md-5">
-
-						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 4"></a>
-							<figcaption>Feature 4</figcaption>
-						</figure>
-
-					</div>
-
 				</div>
 
 			</div>
@@ -146,6 +157,10 @@
 		crossorigin="anonymous"></script>
 
 	<script src="js/bootstrap.min.js"></script>
+	<script>
+		var dt = new Date();
+		document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+	</script>
 
 	<script>
 

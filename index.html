@@ -10,9 +10,23 @@
 	<meta name="author" content="3FitStudio">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+
 
 </head>
 
@@ -85,70 +99,81 @@
 
 			<div class="container">
 
-				<header>
+				<header style="margin-top: 5%; margin-bottom: 2%;">
 					<h1>Welcome in FitHUB!</h1>
-					<p>It's a pleasure to present to you our APP.</p>
+					<h3>It's a pleasure to present to you our APP.</h3>
 
 				</header>
 
 				<div class="row">
-
-					<div class="col-sm-6 col-md-5 offset-md-1">
-
+					<div class="col-sm-12">
 						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 1"></a>
-							<figcaption>Feature 1</figcaption>
+							<div class="d-flex justify-content-center h-100" >
+								<div class="card" style="width: 700px;">
+									<div class="card-header">
+										<h5>Date: <span id="datetime1"></span></h5>
+										<h4>Steps: <span id="steps">5460</span></h4>
+									</div>
+									<div class="card-body">
+										<canvas id="doughnutChart"></canvas>
+									</div>
+								</div>
+							</div>
 						</figure>
 
 					</div>
 
-					<div class="col-sm-6 col-md-5">
-
+					<div class="col-md-12 col-lg-4 offset-lg-2">
 						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 2"></a>
-							<figcaption>Feature 2</figcaption>
+							<div class="d-flex justify-content-center h-100">
+								<div class="card">
+									<div class="card-header">
+										<h4>Date: <span id="datetime_2">10.10.2010</span></h4>
+									</div>
+									<div class="card-body">
+										<form>
+											<div class="form-row">
+												<div class="form-group col-md-8 offset-md-2 d-inline-block">
+													<h4><label>Weight :</label>
+														<span id="weight"><br/>75 kg</span></h4>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
 						</figure>
-
 					</div>
 
-					<div class="col-sm-6 col-md-5 offset-md-1">
-
+					<div class="col-md-12 col-lg-4">
 						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 3"></a>
-							<figcaption>Feature 3</figcaption>
+							<div class="d-flex justify-content-center h-100">
+								<div class="card">
+									<div class="card-header">
+										<h4>Date: <span id="datetime_3">10.10.2010</span></h4>
+									</div>
+									<div class="card-body">
+										<form>
+											<div class="form-row">
+												<div class="form-group col-md-8 offset-md-2 d-inline-block">
+													<h4><label>Calories :</label>
+													<span id="calories"><br/>3570 kcal</span></h4>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
 						</figure>
-
 					</div>
-
-					<div class="col-sm-6 col-md-5">
-
-						<figure>
-							<a href="#"><img class="rounded" src="img/feature.jpeg" alt="Feature 4"></a>
-							<figcaption>Feature 4</figcaption>
-						</figure>
-
-					</div>
-
 				</div>
-
 			</div>
 
 		</section>
 
 	</main>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous"></script>
-
-	<script src="js/bootstrap.min.js"></script>
-
 	<script>
-
 		$(document).ready(function () {
 			$('.dropdown').on('click', function (e) {
 				var $el = $(this);
@@ -173,6 +198,30 @@
 			});
 		});
 
+	</script>
+	<script>
+		//doughnut
+		var ctxD = document.getElementById("doughnutChart").getContext('2d');
+		var myLineChart = new Chart(ctxD, {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [5460, (7000-5460)],
+					backgroundColor: ["#2EF429", "#FCEBCC"],
+					hoverBackgroundColor: ["#228C22", "#D9BA8C"]
+				}]
+			},
+			options: {
+				responsive: true
+			}
+		});
+	</script>
+
+	<script>
+		var dt = new Date();
+		document.getElementById("datetime1").innerHTML = dt.toLocaleDateString();
+		document.getElementById("datetime2").innerHTML = dt.toLocaleDateString();
+		document.getElementById("datetime3").innerHTML = dt.toLocaleDateString();
 	</script>
 	<!-- <script>
 		window.onscroll = function () { myFunction() };

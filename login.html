@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="eng" xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -30,7 +30,7 @@
             <div class="collapse navbar-collapse" id="mainmenu">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Home </a>
+                        <a class="nav-link" href="load.html"> Home </a>
                     </li>
                 </ul>
 
@@ -40,7 +40,9 @@
                             <a class="nav-link" href="#"> Contact </a>
                         </li>
                         <li>
-                            <input type="submit" value="Sign Up" class="btn float-right login_btn mr-2">
+                            <a href="registration.html">
+                                <input type="submit" value="Sign Up" class="btn float-right login_btn mr-2">
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -80,21 +82,10 @@
                                     </div>
                                     <input type="password" class="form-control" placeholder="password">
                                 </div>
-                                <div class="row align-items-center remember">
-                                    <input type="checkbox">Remember Me
-                                </div>
-                                <div class="form-group">
+                                <a href="index.html">
                                     <input type="submit" value="Login" class="btn float-right login_btn">
-                                </div>
+                                </a>
                             </form>
-                        </div>
-                        <div class="card-footer">
-                            <div class="d-flex justify-content-center links">
-                                Don't have an account?<a href="#">Sign Up</a>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <a href="#">Forgot your password?</a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,31 +103,31 @@
 
     <script src="js/bootstrap.min.js"></script>
 
-    <script>
+<!--    <script>-->
 
-        $(document).ready(function () {
-            $('.dropdown').on('click', function (e) {
-                var $el = $(this);
-                var $parent = $(this).offsetParent(".dropdown-menu");
-                if (!$(this).next().hasClass('show')) {
-                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-                }
-                var $subMenu = $(this).next(".dropdown-menu");
-                $subMenu.toggleClass('show');
+<!--        $(document).ready(function () {-->
+<!--            $('.dropdown').on('click', function (e) {-->
+<!--                var $el = $(this);-->
+<!--                var $parent = $(this).offsetParent(".dropdown-menu");-->
+<!--                if (!$(this).next().hasClass('show')) {-->
+<!--                    $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");-->
+<!--                }-->
+<!--                var $subMenu = $(this).next(".dropdown-menu");-->
+<!--                $subMenu.toggleClass('show');-->
 
-                $(this).parent("li").toggleClass('show');
+<!--                $(this).parent("li").toggleClass('show');-->
 
-                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
-                    $('.dropdown-menu .show').removeClass("show");
-                });
+<!--                $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {-->
+<!--                    $('.dropdown-menu .show').removeClass("show");-->
+<!--                });-->
 
-                if (!$parent.parent().hasClass('navbar-nav')) {
-                    $el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 });
-                }
+<!--                if (!$parent.parent().hasClass('navbar-nav')) {-->
+<!--                    $el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 });-->
+<!--                }-->
 
-                return false;
-            });
-        });
+<!--                return false;-->
+<!--            });-->
+<!--        });-->
 
-    </script>
+<!--    </script>-->
 </body>

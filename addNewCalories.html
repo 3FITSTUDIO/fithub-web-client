@@ -10,6 +10,19 @@
 	<meta name="author" content="3FitStudio">
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/Chart.js"></script>
+
+	<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="main.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
@@ -19,7 +32,7 @@
 <body>
 	<header>
 		<nav id="navbar" class="navbar navbar-dark bg-features navbar-expand-lg">
-			<a class="navbar-brand" href="#"><img src="img/logo.png" width="30" height="30"
+			<a class="navbar-brand" href="#"><img src="img/white_logo.png" width="30" height="30"
 												  class="d-inline-block mr-1 align-bottom" alt="">FITHUB</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
 					aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
@@ -37,16 +50,8 @@
 						<div class="dropdown-menu" aria-labelledby="submenu">
 							<a class="dropdown-item" href="weight.html"> Weights </a>
 							<a class="dropdown-item" href="measurment.html"> Measurments </a>
-							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="calories.html"> Calories </a>
 						</div>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link" href="#"> Workouts </a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link " href="#"> Meals </a>
 					</li>
 					<li class="nav-item dropdown active">
 						<a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button"
@@ -54,20 +59,16 @@
 						<div class="dropdown-menu" aria-labelledby="submenu">
 							<a class="dropdown-item" href="addNewMeasurment.html"> Measures </a>
 							<a class="dropdown-item" href="addNewCalories.html"> Calorie intake </a>
-							<div class="dropdown-divider"></div>
 							<a class="dropdown-item" href="addNewWeight.html"> Weight </a>
 						</div>
 					</li>
 				</ul>
 				<div class="form-inline">
 					<ul class="navbar-nav">
-
 						<li class="nav-item">
-							<a class="nav-link" href="#"> Contact </a>
+							<a class="nav-link" href="#"> Account </a>
 						</li>
-						<li class="nav-item mr-2" >
-							<a class="nav-link"  href="#"> Account </a>
-						</li>
+
 						<li>
 							<a href="login.html">
 								<input type="submit" value="Sign out" class="btn float-right login_btn mr-2">
@@ -76,12 +77,9 @@
 					</ul>
 				</div>
 			</div>
-
 		</nav>
-
 	</header>
 	<main>
-
 		<section class="features">
 			<div class="container">
 				<div class="col-md-8 offset-md-2" style="margin-top: 15%">
@@ -104,72 +102,15 @@
 						</div>
 					</div>
 				</div>
-
 			</div>
-
 		</section>
-
 	</main>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"></script>
-
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous"></script>
-
-	<script src="js/bootstrap.min.js"></script>
 	<script>
 		var dt = new Date();
 		document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
 	</script>
 
-<!--	<script>-->
-
-<!--		$(document).ready(function () {-->
-<!--			$('.dropdown').on('click', function (e) {-->
-<!--				var $el = $(this);-->
-<!--				var $parent = $(this).offsetParent(".dropdown-menu");-->
-<!--				if (!$(this).next().hasClass('show')) {-->
-<!--					$(this).parents('.dropdown-menu').first().find('.show').removeClass("show");-->
-<!--				}-->
-<!--				var $subMenu = $(this).next(".dropdown-menu");-->
-<!--				$subMenu.toggleClass('show');-->
-
-<!--				$(this).parent("li").toggleClass('show');-->
-
-<!--				$(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {-->
-<!--					$('.dropdown-menu .show').removeClass("show");-->
-<!--				});-->
-
-<!--				if (!$parent.parent().hasClass('navbar-nav')) {-->
-<!--					$el.next().css({ "top": $el[0].offsetTop, "left": $parent.outerWidth() - 4 });-->
-<!--				}-->
-
-<!--				return false;-->
-<!--			});-->
-<!--		});-->
-
-<!--	</script>-->
-	<!-- <script>
-		window.onscroll = function () { myFunction() };
-
-		// Get the navbar
-		var navbar = document.getElementById("navbar");
-
-		// Get the offset position of the navbar
-		var sticky = navbar.offsetTop;
-
-		// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-		function myFunction() {
-			if (window.pageYOffset >= sticky) {
-				navbar.classList.add("sticky")
-			} else {
-				navbar.classList.remove("sticky");
-			}
-		}
-	</script> -->
 
 </body>
 

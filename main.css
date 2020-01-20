@@ -4,8 +4,10 @@ body, html
 	width: 100%;
 	background: linear-gradient( rgb( 67, 229, 111) 0%,  rgb(78, 214, 110) 100%);
 	color: #efefef;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Avenir-Heavy', sans-serif;
     font-size: 17px;
+	border-radius: 25px;
+
 
 }
 
@@ -13,12 +15,12 @@ h1
 {
 	font-size: 36px;
 	font-weight: 400;
-	color: whitesmoke;
 	margin: auto;
 }
 
 .features
 {
+	border-radius: 25px;
 	text-align: center;
 }
 
@@ -54,47 +56,28 @@ h1
 
 figure 
 {
+	border-radius: 25px;
 	margin-left: 3%;
 	margin-right: 3%;
-	opacity:0.8;
 }
 
-figure:hover{
-	opacity:1;
-}
 
 .bg-features
 {
 	background-color: 	rgb(0,100,0) !important;
 }
 
-/* The sticky class is added to the navbar with JS when it reaches its scroll position */
-/* .sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  /* .sticky + .content {
-	padding-top: 60px;
-  }
- */ 
-/* login menu */
-
-
-	
 	.card{
+		 border-radius: 25px;
+		 font-weight: bolder;
+		 color: black;
 		 height: auto;
-		 margin-top: 5px;
 		 margin-bottom: auto;
 		 width: 400px;
-		 background-color: rgba(0,0,0,0.5) !important;
+		 background-color: white !important;
 		 text-align: center;
 	 }
 
-
-	
 	.social_icon span{
 	font-size: 60px;
 	margin-left: 10px;
@@ -105,9 +88,16 @@ figure:hover{
 	color: white;
 	cursor: pointer;
 	}
+
+	.card-body{
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
 	
-	.card-header h3{
-	color: white;
+	.card-header {
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+
 	}
 	
 	.social_icon{
@@ -124,9 +114,7 @@ figure:hover{
 	}
 	
 	input:focus{
-	outline: 0 0 0 0  !important;
 	box-shadow: 0 0 0 0 !important;
-	
 	}
 	
 	.remember{
@@ -168,14 +156,10 @@ figure:hover{
 	margin-left: 4px;
 	}
 
-	/* .margin-top
-	{
-		margin-top: 10%;
-	} */
 
 	.divider-vertical {
 		height: 50px;
 		margin: 0 9px;
 		border-left: 1px solid #F2F2F2;
 		border-right: 1px solid #FFF;
-		}
+	}

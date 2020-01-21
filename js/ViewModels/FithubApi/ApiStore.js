@@ -1,0 +1,2 @@
+var userId;
+var userLogin;
